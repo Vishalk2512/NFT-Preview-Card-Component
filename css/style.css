@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Major+Mono+Display&family=Outfit:wght@300;400;600&family=Poppins:wght@100;300;400;500;700&display=swap");
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+}
+
+body {
+    font-family: "Major Mono Display", monospace;
+    font-family: "Poppins", sans-serif;
+    font-family: "Outfit", sans-serif;
+    background-color: var(--very-dark-blue-bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+}
+.card {
+    max-width: 350px;
+    margin: 2em 1em;
+    background-color: var(--very-dark-blue-card);
+    padding: 1.75em;
+    border-radius: 13px;
+}
+.card__image {
+    display: block;
+    width: 100%;
+    border-radius: 13px;
+    transition: all 0.5s linear;
+}
+.image-section:hover .card__image {
+    cursor: pointer;
+    opacity: 0.6;
+}
+.card__header {
+    color: white;
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 1em;
+}
+.card__header:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+.card__text {
+    color: var(--soft-blue);
+    font-size: 1.125rem;
+    margin-top: 1em;
+    font-weight: 400;
+    line-height: 1.5em;
+}
+
+.nft-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2em 0;
+    border-bottom: 1.5px solid var(--very-dark-blue-line);
+}
+.ethereum,
+.duration {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.ethereum img {
+    width: 15px;
+}
+.ethereum span {
+    color: var(--cyan);
+    font-weight: 600;
+    font-size: 1.125rem;
+}
+.duration span {
+    color: var(--soft-blue);
+    font-weight: 400;
+    font-size: 1.125rem;
+}
+.card__footer {
+    display: flex;
+    margin-top: 1em;
+    align-items: center;
+    gap: 20px;
+}
+.card__footer img {
+    width: 40px;
+    border: 1.7px solid white;
+    border-radius: 100%;
+}
+.card__footer p {
+    color: var(--soft-blue);
+    font-size: 1.125rem;
+}
+.card__footer p span {
+    color: white;
+}
+.card__footer p span:hover {
+    color: var(--cyan);
+    cursor: pointer;
+}
+.image-section {
+    border-radius: 13px;
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cyan);
+}
+.eye {
+    width: 36px;
+    position: absolute;
+    left: calc(50% - 18px);
+    bottom: calc(50% - 18px);
+    transition: all 0.5s linear;
+    transform: scale(0);
+}
+.image-section:hover .eye {
+    transform: scale(1);
+    cursor: pointer;
+}
